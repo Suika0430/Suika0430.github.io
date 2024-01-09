@@ -1,0 +1,98 @@
+<!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 class="section-heading text-uppercase">Profile</h1>
+                </div>
+                <div class="col-lg-12">
+                    <h3 class="section-heading text-muted">基本情報</h3>
+                </div>
+                <div class="col-md-12">
+                    <p class="text-muted">
+                        生年月日: 2000年4月30日<br>
+                        出身地: 兵庫県<br>
+                        身長: 156cm<br>
+                        特技: ピアノ (10年), ミュージカル (6年), ダンス (8年)<br>
+                        趣味: 絵を描くこと, 手紙を書くこと<br>
+                        教育: お茶の水女子大学 生活科学部 心理学科 卒業<br>
+                        資格: 英語検定2級, 漢字検定2級, 数学検定2級, JADP認定メンタル心理カウンセラー, 上級心理カウンセラー資格
+                    </p>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="section-heading text-muted">出演情報</h3>
+                </div>
+                <div class="col-md-6">
+                    <h4 class="service-heading">映画</h4>
+                    <p class="text-muted">
+                        {% for m in site.data.movie %}
+                            {{ m.year }}年『{{ m.title }}』{{ m.role }}役 <i>{{ m.director }}監督</i><br>
+                        {% endfor %}
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h4 class="service-heading">MV</h4>
+                    <p class="text-muted">
+                        {% for m in site.data.mv %}
+                            {% if m.url %}
+                            {{ m.year }}年 {{ m.artist }}『<a href="{{ m.url }}">{{ m.title }}</a>』<br>
+                            {% else %}
+                            {{ m.year }}年 {{ m.artist }}『{{ m.title }}』<br>
+                            {% endif %}
+                        {% endfor %}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4 class="service-heading">テレビ</h4>
+                    <p class="text-muted">
+                        {% for m in site.data.tv %}
+                            {{ m.year }}年 {{ m.ch }}『{{ m.title }}』{{ m.role }}役<br>
+                        {% endfor %}
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h4 class="service-heading">舞台</h4>
+                    <p class="text-muted">
+                        {% for m in site.data.stage %}
+                            {{ m.year }}年『{{ m.title }}』{{ m.role }}役<br>
+                        {% endfor %}
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h4 class="service-heading">CM</h4>
+                    <p class="text-muted">
+                        {% for m in site.data.cm %}
+                            {% if m.url %}
+                            {{ m.year }}年 <a href="{{ m.url }}">{{ m.title }}</a><br>
+                            {% else %}
+                            {{ m.year }}年 {{ m.title }}<br>
+                            {% endif %}
+                        {% endfor %}
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h4 class="service-heading">Magazine</h4>
+                    <p class="text-muted">
+                        {% for m in site.data.magazine %}
+                            {% if m.url %}
+                            {{ m.year }}年 <a href="{{ m.url }}">{{ m.title }}</a><br>
+                            {% else %}
+                            {{ m.year }}年 {{ m.title }}<br>
+                            {% endif %}
+                            &emsp;&emsp;&emsp;&nbsp;&nbsp; 定価: {{ m.price }}円(税込)<br>
+                            &emsp;&emsp;&emsp;&nbsp;&nbsp; 発行元: {{ m.publisher }}<br>
+                            &emsp;&emsp;&emsp;&nbsp;&nbsp; ISBN: {{ m.ISBN }} <br>
+                        {% endfor %}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>

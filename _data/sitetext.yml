@@ -1,0 +1,101 @@
+#
+# Work based on https://github.com/mmistakes/minimal-mistakes/blob/master/_data/ui-text.yml
+#
+# Configuration: Add to _config.yml
+# locale: "en-US"  [YOUR PREFERRED LOCALE]
+#
+# How to use:
+# {{ site.data.ui-text[site.locale].<var_name> | default: 'text' }}
+
+# English (default)
+# -----------------
+en: &DEFAULT_EN
+  header:
+    title: official site
+    text: Suica Yamazaki
+
+  portfolio:
+    title: "Portfolio"
+    text: ""
+    section: portfolio
+    closebutton: "Close Project"
+
+  contact:
+    title: "Contact"
+    text: "お仕事のご依頼はこちらから"
+    section: contact
+    name: "Name*"
+    name-validation: "Please enter your name."
+    email: "Email*"
+    email-validation: "Please enter your email address."
+    phone: "Phone Number*"
+    phone-validation: "Please enter your phone number."
+    message: "Message*"
+    message-validation: "Please enter a message."
+    subject: "Contact Form Submission"
+    submit: "Send"
+
+  footer:
+    legal: "Privacy Policy"
+    social:
+      - icon: "fa fa-home"
+        url: http://www.jfct.co.jp/b_yamazaki.html
+      - icon: "fab fa-instagram"
+        url: https://www.instagram.com/suika_yamazaki/
+      - icon: "fab fa-twitter"
+        url: https://twitter.com/suika_yamazaki
+      - icon: "fa fa-coffee"
+        url: https://www.buymeacoffee.com/suika
+      - icon: "fab fa-wikipedia-w"
+        url: https://ja.wikipedia.org/wiki/%E5%B1%B1%EF%A8%91%E7%BF%A0%E4%BD%B3
+
+en-US:
+  <<: *DEFAULT_EN
+en-CA:
+  <<: *DEFAULT_EN
+en-GB:
+  <<: *DEFAULT_EN
+en-AU:
+  <<: *DEFAULT_EN
+
+
+# -------
+ja: &DEFAULT_JA
+  header:
+    title: official site
+    text: Suika Yamazaki
+
+  portfolio:
+    title: "Portfolio"
+    text: ""
+    section: portfolio
+    closebutton: "閉じる"
+
+  contact:
+    title: "Contact"
+    text: "お仕事のご依頼はこちらから"
+    section: contact
+    name: "お名前*"
+    name-validation: "Please enter your name."
+    email: "Email*"
+    email-validation: "Please enter your email address."
+    phone: "電話番号*"
+    phone-validation: "Please enter your phone number."
+    message: "メッセージ*"
+    message-validation: "Please enter a message."
+    subject: "Contact Form Submission"
+    submit: "送信"
+
+  footer:
+    legal: "プライバシーポリシー"
+    social:
+      - icon: "fa fa-globe"
+        url: http://www.jfct.co.jp/b_yamazaki.html
+      - icon: "fab fa-instagram"
+        url: https://www.instagram.com/suika_yamazaki/
+      - icon: "fab fa-twitter"
+        url: https://twitter.com/suika_yamazaki
+      - icon: "fa fa-coffee"
+        url: https://www.buymeacoffee.com/suika
+ja-JP:
+  <<: *DEFAULT_JA
