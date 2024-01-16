@@ -11,12 +11,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-url    : "" # the base hostname & protocol for your site, e.g. http://example.com
+url    : "https://suica430.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 
 title      : Suica Yamazaki
 email      : suika.yamazaki.2000 [at] gmail.com
-description: 
+description: 山﨑翠佳（やまざき すいか）のオフィシャルページ, Suica Yamazaki (Suika Yamazaki)'s Official homepage. 
 author     : Suica Yamazaki
 
 locale: "en-US" # See available languages in _data/sitetext.yml
