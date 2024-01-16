@@ -67,13 +67,21 @@
 
             <div class="row">
                 <div class="col-md-6">
-                    <h4 class="service-heading">CM</h4>
+                    <h4 class="service-heading">配信</h4>
                     <p class="text-muted">
-                        {% for m in site.data.cm %}
-                            {% if m.url %}
-                            {{ m.year }}年 <a href="{{ m.url }}">{{ m.title }}</a><br>
+                        {% for m in site.data.stream %}
+                            {% if m.role %}
+                              {% if m.url %}
+                              {{ m.year }}年『<a href="{{ m.url }}">{{ m.title }}</a>』{{ m.role }}役 <i>{{ m.director }}監督</i><br>
+                              {% else %}
+                              {{ m.year }}年『{{ m.title }}』{{ m.role }}役 <i>{{ m.director }}監督</i><br>
+                              {% endif %}
                             {% else %}
-                            {{ m.year }}年 {{ m.title }}<br>
+                              {% if m.url %}
+                              {{ m.year }}年『<a href="{{ m.url }}">{{ m.title }}</a>』<i>{{ m.director }}監督</i><br>
+                              {% else %}
+                              {{ m.year }}年『{{ m.title }}』<i>{{ m.director }}監督</i><br>
+                              {% endif %}
                             {% endif %}
                         {% endfor %}
                     </p>
@@ -90,6 +98,20 @@
                             &emsp;&emsp;&emsp;&nbsp;&nbsp; 定価: {{ m.price }}円(税込)<br>
                             &emsp;&emsp;&emsp;&nbsp;&nbsp; 発行元: {{ m.publisher }}<br>
                             &emsp;&emsp;&emsp;&nbsp;&nbsp; ISBN: {{ m.ISBN }} <br>
+                        {% endfor %}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4 class="service-heading">CM</h4>
+                    <p class="text-muted">
+                        {% for m in site.data.cm %}
+                            {% if m.url %}
+                            {{ m.year }}年 <a href="{{ m.url }}">{{ m.title }}</a><br>
+                            {% else %}
+                            {{ m.year }}年 {{ m.title }}<br>
+                            {% endif %}
                         {% endfor %}
                     </p>
                 </div>
