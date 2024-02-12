@@ -39,7 +39,7 @@ en: &DEFAULT_EN
     legal: "Privacy Policy"
     social:
       - icon: "fa fa-home"
-        url: http://www.jfct.co.jp/b_yamazaki.html
+        url: http://www.jfct.co.jp/artist/suika_yamazaki/
       - icon: "fab fa-instagram"
         url: https://www.instagram.com/suika_yamazaki/
       - icon: "fab fa-twitter"
